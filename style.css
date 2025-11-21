@@ -1,0 +1,210 @@
+/* Falcon Walker Academy Color Palette */
+:root {
+    --primary-blue: #0A3D62; /* Deep Navy Blue */
+    --accent-gold: #FFC300; /* Gold/Yellow Accent */
+    --text-dark: #333;
+    --background-light: #f9f9f9;
+    --white: #ffffff;
+    --light-blue: #e6eef5; /* Light background for sections */
+}
+
+/* --- Basic Reset and Typography --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--accent-gold);
+}
+
+h1, h2, h3 {
+    color: var(--primary-blue);
+    margin-top: 0;
+}
+
+/* --- Header and Navigation --- */
+.main-header {
+    background-color: var(--white);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    display: block;
+    padding: 5px 0;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+/* --- Main Content and Reusable Classes --- */
+main {
+    padding: 20px 5%;
+    min-height: 70vh;
+}
+
+.page-section {
+    padding: 40px 0;
+}
+
+.section-title {
+    border-bottom: 2px solid var(--accent-gold);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* --- Call to Action (CTA) Button Style --- */
+.cta-button {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    background-color: #e5b000;
+    transform: translateY(-2px);
+}
+
+/* --- Student Life Specific Styles --- */
+.activity-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.activity-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.clubs-list ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.clubs-list li {
+    background-color: var(--light-blue);
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* --- Contact Form/Layout Styles (from contact.html) --- */
+form {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 95%; /* Adjust width for padding/border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding/border in width */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    /* For Contact Page columns */
+    .contact-layout {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .main-nav li {
+        margin: 5px 0;
+        margin-left: 0;
+    }
+    .activity-grid, .clubs-list ul {
+        flex-direction: column;
+    }
+    .activity-card, .clubs-list li {
+        margin-bottom: 10px;
+    }
+}
